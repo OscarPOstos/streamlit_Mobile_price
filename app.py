@@ -3,8 +3,6 @@ import streamlit as st
 # import pandas as pd
 from PIL import Image
 
-image = Image.open('static/images/bateria.png')
-
 st.title("Streamlit Mobile price ML")
 
 # Add a text input
@@ -12,9 +10,15 @@ columns = st.columns(4)
 with columns[0]:
     st.text("")
     st.text("")
+    image = Image.open('static/images/bateria.png')
     st.image(image, width=50)
 with columns[1]:
     height = st.number_input("Enter the battery power in mAh:", step=100)
+with columns[2]:
+    st.text("")
+    st.text("")
+    image = Image.open('static/images/procesador.png')
+    st.image(image, width=50)
 submit = st.button("Submit")
 
 # Display the entered name
