@@ -3,8 +3,11 @@ import joblib
 import pandas as pd
 from model.mobile import MobileModel
 from components.components import *
+from static.style.style import set_style
 
 mobile = MobileModel(0, 0, False, 0, 0, 0, 0, 0, 0)
+
+set_style()
 
 st.title("Streamlit Mobile price ML")
 
