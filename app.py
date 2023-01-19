@@ -10,6 +10,7 @@ st.title("Streamlit Mobile price ML")
 # Add a text input
 columns = st.columns(5)
 with columns[0]:
+    st.text()
     st.image(image, width=50)
 with columns[1]:
     height = st.number_input("Enter the battery power in mAh:", step=100)
