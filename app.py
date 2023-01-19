@@ -6,7 +6,7 @@ from PIL import Image
 st.title("Streamlit Mobile price ML")
 
 # Add a text input
-columns = st.columns(4)
+columns = st.columns(5)
 with columns[0]:
     st.text("")
     st.text("")
