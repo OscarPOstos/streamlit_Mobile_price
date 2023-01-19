@@ -8,7 +8,7 @@ image = Image.open('static/images/bateria.png')
 st.title("Streamlit Mobile price ML")
 
 # Add a text input
-st.image()
+st.image(image)
 height = st.number_input("Enter the battery power in mAh:", step=1.0)
 submit = st.button("Submit")
 
