@@ -9,8 +9,6 @@ mobile = MobileModel(0, 0, False, 0, 0, 0, 0, 0, 0)
 
 st.title("Streamlit Mobile price ML")
 
-set_style()
-
 set_first_section(mobile)
 set_second_section(mobile)
 
@@ -25,3 +23,5 @@ if submit:
     X = X.replace([True, False], [1, 0])
     prediction = mobile_model.predict(X)[0]
     st.text(f"{20 + int(prediction) * 120}$ aproximadamente")
+
+set_style()
