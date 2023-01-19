@@ -31,6 +31,12 @@ with columns[2]:
 with columns[3]:
     clock_speed = st.number_input("Enter the clock speed:", step=1.0)
     ram = st.number_input("Enter ram memory in MB:", step=1000)
+columns2 = st.columns(3)
+with columns2[0]:
+    primary_camera = st.number_input("Enter the mega px of the primary camera:", step=1.0)
+with columns2[1]:
+    image = Image.open('static/images/mobile.png')
+    st.image(image)
 submit = st.button("Submit")
 
 # Display the entered name
