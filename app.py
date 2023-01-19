@@ -24,8 +24,13 @@ with columns[2]:
     st.text("")
     image = Image.open('static/images/procesador.png')
     st.image(image, width=50)
+    st.text("")
+    st.text("")
+    image = Image.open('static/images/memoria_ram.png')
+    st.image(image, width=50)
 with columns[3]:
     clock_speed = st.number_input("Enter the clock speed:", step=1.0)
+    ram = st.number_input("Enter ram memory in MB:", step=1000)
 submit = st.button("Submit")
 
 # Display the entered name
