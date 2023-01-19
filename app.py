@@ -55,7 +55,6 @@ if submit:
                        gb_intern_memory, primary_camera, height, width, ram]],
                      columns=["battery_power", "clock_speed", "dual_sim",
                               "fc", "int_memory", "pc", "px_height", "px_width" "ram"])
-    st.text(X)
     X = X.replace([True, False], [1, 0])
-    prediction = mobile_model.predict(X)[0]
-    st.text(prediction)
+    # prediction = mobile_model.predict(X)[0]
+    # st.text(prediction)
