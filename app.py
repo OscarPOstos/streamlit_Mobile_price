@@ -1,5 +1,5 @@
 import streamlit as st
-# import joblib
+import joblib
 # import pandas as pd
 from PIL import Image
 
@@ -25,8 +25,7 @@ submit = st.button("Submit")
 
 # Display the entered name
 if submit:
-    pass
-    # pickled_model = joblib.load(open('model/mobile_model.pkl', 'rb'))
+    pickled_model = joblib.load(open('model/mobile_model.pkl', 'rb'))
     # X = pd.DataFrame([[height, weight, color_eyes]], columns=["Height", "Weight", "Eye"])
     # X = X.replace(["Brown", "Blue"], [1, 0])
     # prediction = pickled_model.predict(X)[0]
