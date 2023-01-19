@@ -40,11 +40,11 @@ with columns2[1]:
     st.text("")
     st.text("")
     st.image(image, width= 200)
+    width = st.number_input("Enter the width in px of the mobile", step=1.0)
 with columns2[2]:
     frontal_camera = st.number_input("Enter the mega px of the frontal camera:", step=1.0)
     height = st.number_input("Enter the height in px of the mobile", step=1.0)
 
-width = st.number_input("Enter the width in px of the mobile", step=1.0)
 submit = st.button("Submit")
 
 # Display the entered name
