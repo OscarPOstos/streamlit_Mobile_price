@@ -21,4 +21,4 @@ if submit:
                               "fc", "int_memory", "pc", "px_height", "px_width", "ram"])
     X = X.replace([True, False], [1, 0])
     prediction = mobile_model.predict(X)[0]
-    st.text(f"{20 + int(prediction) * 120}€ aproximadamente")
+    st.text(f"{20 + int(prediction) * 120}$ aproximadamente")
