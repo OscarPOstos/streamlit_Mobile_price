@@ -14,6 +14,7 @@ submit = st.button("Submit")
 
 # Display the entered name
 if submit:
+    pass
     # pickled_model = joblib.load(open('model/mobile_model.pkl', 'rb'))
     # X = pd.DataFrame([[height, weight, color_eyes]], columns=["Height", "Weight", "Eye"])
     # X = X.replace(["Brown", "Blue"], [1, 0])
