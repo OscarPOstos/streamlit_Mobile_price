@@ -12,8 +12,13 @@ with columns[0]:
     st.text("")
     image = Image.open('static/images/bateria.png')
     st.image(image, width=50)
+    st.text("")
+    st.text("")
+    image = Image.open('static/images/memoria_interna.png')
+    st.image(image, width=50)
 with columns[1]:
     mAh = st.number_input("Enter the battery power in mAh:", step=100)
+    gb_intern_memory = st.number_input("Enter intern memory in GB:", step=1)
 with columns[2]:
     st.text("")
     st.text("")
