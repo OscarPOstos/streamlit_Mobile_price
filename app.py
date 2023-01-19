@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-# import pandas as pd
+import pandas as pd
 from PIL import Image
 
 st.title("Streamlit Mobile price ML")
@@ -34,6 +34,7 @@ with columns[3]:
 columns2 = st.columns(3)
 with columns2[0]:
     primary_camera = st.number_input("Enter the mega px of the primary camera:", step=1.0)
+    dual_sim = st.checkbox('Dual sim?')
 with columns2[1]:
     image = Image.open('static/images/mobile.png')
     st.text("")
@@ -49,8 +50,11 @@ submit = st.button("Submit")
 
 # Display the entered name
 if submit:
-    pickled_model = joblib.load(open('model/mobile_model.pkl', 'rb'))
-    # X = pd.DataFrame([[height, weight, color_eyes]], columns=["Height", "Weight", "Eye"])
-    # X = X.replace(["Brown", "Blue"], [1, 0])
-    # prediction = pickled_model.predict(X)[0]
-    # st.text(prediction)
+    mobile_model = joblib.load(open('model/mobile_model.pkl', 'rb'))
+    X = pd.DataFrame([[mAh, clock_speed, dual_sim, frontal_camera,
+                       gb_intern_memory, primary_camera, height, width, ram]],
+                     columns=["battery_power", "clock_speed", "dual_sim",
+                              "fc", "int_memory", "pc", "px_height", "px_width" "ram"])
+    X = X.replace([True, False], [1, 0])
+    prediction = mobile_model.predict(X)[0]
+    st.text(prediction)
