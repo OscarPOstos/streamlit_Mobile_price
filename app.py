@@ -7,9 +7,9 @@ from static.style.style import set_style
 
 mobile = MobileModel(0, 0, False, 0, 0, 0, 0, 0, 0)
 
-set_style()
-
 st.title("Streamlit Mobile price ML")
+
+set_style()
 
 set_first_section(mobile)
 set_second_section(mobile)
